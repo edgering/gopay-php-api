@@ -28,7 +28,7 @@ class GoPay
 
     public function getConfig($key)
     {
-        return $this->config[$key];
+        return isset($this->config[$key]) ? $this->config[$key] : FALSE;
     }
 
     public function call($urlPath, $contentType, $authorization, $method, $data = null)
